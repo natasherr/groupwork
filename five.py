@@ -1,4 +1,5 @@
 def sim_toolkit():
+    # Main loop for the program.
     while True:
         print("\n SIM 1")
         print("1. Safaricom")
@@ -9,6 +10,7 @@ def sim_toolkit():
         if choice == "1":
             print("You selected Safaricom.")
         elif choice == "2":
+            # Display the mpesa sub-menu
             while True:
                 print("\n SIM 1 - M_PESA")
                 print("1. Send Money")
@@ -22,6 +24,7 @@ def sim_toolkit():
 
                 if mpesa_choice == "1":
                     while True:
+                        # User enters the phone number.
                         phone = input("Enter Phone Number (10-13 digits): ")
                         if phone.isdigit() and 10 <= len(phone) <= 13:
                             print(f"Phone number {phone} validated.")
@@ -37,6 +40,7 @@ def sim_toolkit():
             print("Exiting SIM Toolkit. Goodbye!")
             break
         else:
+            # Handle invalid choices in the main menu.
             print("Invalid choice. Try again.")
 
 
